@@ -66,3 +66,27 @@ function save() {
 
     return true;
 }
+var name=localStorage.getItem('firstName')+" "+localStorage.getItem('lastName');
+
+function post() {
+
+    var para = document.createElement("p");
+     var sp = document.createElement("span"); 
+    var x = document.getElementById("txtArea").value;
+
+    var node = document.createTextNode(x);
+     var node2 = document.createTextNode(name);
+  
+  
+     var a= sp.appendChild(node2);
+   var b= para.appendChild(node);
+  
+    var element = document.getElementById("div1");
+     var y=element.appendChild(sp);
+    var z = element.appendChild(para);
+
+    document.getElementById("txtArea").value = "";
+   
+
+
+}
